@@ -1,0 +1,20 @@
+let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
+let secs=$((${upSeconds}%60))
+let mins=$((${upSeconds}/60%60))
+let hours=$((${upSeconds}/3600%24))
+let days=$((${upSeconds}/86400))
+UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
+ASCII=`cat ~/.motd.ascii`
+
+
+echo "$(tput setaf 2)
+$(tput setaf 3)`date +"%A, %e %B %Y, %r"`
+`uname -srmo`$(tput setaf 2)
+
+${ASCII}
+
+$(tput setaf 1)
+Uptime.............: ${UPTIME}
+CPU................:`cat /proc/cpuinfo | grep 'model name' | head -1 | cut -d':' -f2` (`nproc` Cores)
+Memory.............: `awk '/MemFree/ {printf( "%.1f\n", $2 / 1024 / 1024 )}' /proc/meminfo` GB (Free) / `awk '/MemTotal/ {printf( "%.1f\n", $2 / 1024 / 1024 )}' /proc/meminfo` GB (Total)
+$(tput sgr0)"

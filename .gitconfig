@@ -1,0 +1,8 @@
+[user]
+	signingkey = 5D0B1E8EE86EA0F3
+	name = Denis Zunke
+	email = denis.zunke@gmail.com
+[commit]
+	gpgsign = true
+[tag]
+	forceSignAnnotated = true
