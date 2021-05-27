@@ -69,3 +69,16 @@ Update SSH-Configs with very old ciphers. DANGER! Only in not reachable systems:
 KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
 Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,3des-cbc
 ```
+
+Install Headless Chrome
+```
+sudo add-apt-repository ppa:canonical-chromium-builds/stage
+sudo apt-get install chromium-browser
+sudo apt-get install software-properties-common
+apt --fix-broken install
+sudo apt-get install software-properties-common
+sudo apt-get install chromium-browser
+apt autoremove
+apt autoclean
+sudo apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
+```
