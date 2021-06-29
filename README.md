@@ -9,7 +9,7 @@ Setup clean wsl:
 ```
 sudo add-apt-repository ppa:ondrej/php
 
-sudo apt-get install -y php7.3-cli php7.3-zip php7.3-pgsql php7.3-mysql php7.3-xml php7.3-tidy php7.3-mbstring
+sudo apt-get install -y php7.3-cli php7.3-zip php7.3-pgsql php7.3-mysql php7.3-xml php7.3-tidy php7.3-mbstring php7.3-xdebug php7.3-intl php7.3-curl php7.3-gd php7.3-bcmath
 sudo apt-get install -y vim
 sudo apt-get install -y build-essential
 
@@ -24,7 +24,7 @@ sudo mv composer.phar /usr/bin/composer
 sudo chmod +x /usr/bin/composer
 ```
 
-sudo without passwort for offline systems: 
+sudo without passwort for offline systems:
 ```
 sudo -i bash -c 'echo "de_zunke ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
 ```
@@ -34,7 +34,7 @@ Grub Timeout-Fix after upgrading vagrant bento/ubtunu
 # Edit /etc/defaults/grub
 GRUB_RECORDFAIL_TIMEOUT=0
 
-sudo update-grub 
+sudo update-grub
 ```
 
 SSH Config Pewrmissions after Uploading Keysets
@@ -44,7 +44,7 @@ public key (.pub file): 644 (-rw-r--r--)
 private key (id_rsa): 600 (-rw-------)
 ```
 
-Install GPG-Keys: 
+Install GPG-Keys:
 ```
 gpg --import PATH_TO_GPG_FILE;
 gpg --edit-key {KEYID_FROM_IMPORT} trust quit; # Select first 5 and then Y in Dialog
@@ -63,7 +63,7 @@ git config --global tag.forceSignAnnotated true
 ```
 
 
-// Only for old tools with old ssh clients that could not be updates :/ 
+// Only for old tools with old ssh clients that could not be updates :/
 Update SSH-Configs with very old ciphers. DANGER! Only in not reachable systems:
 ```
 KexAlgorithms curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group-exchange-sha1,diffie-hellman-group1-sha1
@@ -81,4 +81,21 @@ sudo apt-get install chromium-browser
 apt autoremove
 apt autoclean
 sudo apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
+```
+
+Manually write the windows hosts file to wsl hosts file
+```
+cat /mnt/c/Windows/System32/drivers/etc/hosts | grep 192.* | sudo tee -a /etc/hosts
+```
+
+Globales Git Ignore
+```
+nano ~/.gitignore_global
+# Einträge eintragen
+
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+```
+git config --global credential.helper 'cache --timeout=3600'
 ```

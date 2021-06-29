@@ -17,6 +17,9 @@ unset file;
 export GOPATH=/mnt/c/Development/_GOLang
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
+# XServer Display
+export DISPLAY=${DISPLAY:-$(grep -Po '(?<=nameserver ).*' /etc/resolv.conf):0}
+
 # Export System Variables for Development
 export MUTATION_THREADS=4
 
