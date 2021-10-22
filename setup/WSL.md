@@ -1,6 +1,6 @@
-= Some WSL Live-Hacks
+# Some WSL Live-Hacks
 
-== Optimize Storage
+## Optimize Storage
 
 WSL do not free disk storage automatically, so in an admin powershell execute:
 
