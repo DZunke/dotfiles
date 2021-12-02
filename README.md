@@ -29,6 +29,12 @@ sudo without passwort for offline systems:
 sudo -i bash -c 'echo "de_zunke ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
 ```
 
+SSH Connections not possible in VPN
+```
+# lower the networking mtu if it leads into timeouts
+ip link set mtu 1100 eth0
+```
+
 Grub Timeout-Fix after upgrading vagrant bento/ubtunu
 ```
 # Edit /etc/defaults/grub
