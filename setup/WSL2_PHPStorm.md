@@ -39,7 +39,7 @@ wsl --set-version <distro> <version>
 Soem packages are needed for phpstorm
 
 ```bash
-sudo apt install libcups2 libpangocairo-1.0-0 libatk-adaptor libxss1 libnss3 libxcb-keysyms1 x11-apps libgbm1
+sudo apt install libcups2 libpangocairo-1.0-0 libatk-adaptor libxss1 libnss3 libxcb-keysyms1 x11-apps libgbm1 libxdamage1 libxkbcommon0
 ```
 
 This should be in `.bashrc` or `.profile`
