@@ -72,7 +72,7 @@ To test the setup try the following:
 * With Admin-Setup
   * Execute `/opt/intellij/bin/phpstorm.sh` at a wsl2 shell
 * Without Admin-Setup
-  * Execute `DISPLAY=127.0.0.1:0 ssh -p2222 -Y YOUR_USER@127.0.0.1` at git bash
+  * Execute `DISPLAY=127.0.0.1:0 ssh -p2222 -C -Y YOUR_USER@127.0.0.1` at git bash
   * A SSH connection should be established
   * Execute `/opt/intellij/bin/phpstorm.sh` at the opened ssh session
 
@@ -80,7 +80,7 @@ All should be fine and you should see phpstorm starting at your windows environm
 
 Windows shortcut for executing PHPStorm without Admin-Setup: 
 
-`"C:\Program Files\Git\git-bash.exe" -c "DISPLAY=127.0.0.1:0 ssh -p2222 -Y -f YOUR_USER@127.0.0.1 'bash -l -c /opt/intellij/bin/phpstorm.sh >/dev/null 2>&1'"`
+`"C:\Program Files\Git\git-bash.exe" -c "DISPLAY=127.0.0.1:0 ssh -p2222 -Y -C -f YOUR_USER@127.0.0.1 'bash -l -c /opt/intellij/bin/phpstorm.sh >/dev/null 2>&1'"`
 
 ## Setup Service Autostart at WSL2 Environment
 
