@@ -5,7 +5,7 @@ VS Code can run natively on a WSL2 environment. PHPStorm currently cannot. To ar
 ## Windows Preparations (With Windows Admin Permissions)
 
 * [Setup Windows to use WSL2 environment](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
-* [Install XServer](https://chocolatey.org/packages/vcxsrv)
+* [Install XServer](https://sourceforge.net/projects/vcxsrv/)
 * Configure `vcxsrv.exe` like documented below
 * Use [`config.xlaunch`](./config.xlaunch) to start XServer, the config extension should be automatically linked to XServer
   * The `config.xlaunch` could be added to windows autostart if needed
@@ -13,7 +13,7 @@ VS Code can run natively on a WSL2 environment. PHPStorm currently cannot. To ar
 ## Windows Preparations (Without Windows Admin Permissions)
 
 * [Setup Windows to use WSL2 environment](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
-* Download [XServer](https://chocolatey.org/packages/vcxsrv) setup file without exeuting it
+* Download [XServer](https://sourceforge.net/projects/vcxsrv/) setup file without exeuting it
 * Extract dowloaded XServer setup file with, for example, [7Zip](https://7-zip.de/download.html) 
 * Remove `$PLUGINSDIR` from extracted folder
 * Configure `vcxsrv.exe` like documented below
