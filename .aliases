@@ -14,5 +14,3 @@ alias path='echo -e ${PATH//:/\\n}'
 
 alias chrome-debug="google-chrome --disable-gpu --headless --no-sandbox --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 --disable-new-profile-management --ignore-certificate-errors --no-default-browser-check --disable-gpu --user-data-dir=$HOME/.chromeDebug --window-size='1920,1080'"
 alias phpstorm="/opt/intellij/bin/phpstorm.sh > /dev/null 2>&1"
-
-alias phpstan="vendor/bin/phpstan analyze --level=max"
