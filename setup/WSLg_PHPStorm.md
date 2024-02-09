@@ -32,6 +32,16 @@ I also created btw. changed the PHPStorm alias in `~/.aliases`.
 alias phpstorm="/home/dzunke/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm.sh > /dev/null 2>&1"
 ```
 
+Also there are shortcuts available but in the wrong directory. To get those shortcuts known to Windows they have to
+be copied into the correct directory. As the target directory is only available to root users there is sudo access
+needed to do it.
+
+```bash
+sudo cp $HOME/.local/share/applications/* /usr/share/applications
+```
+
+After this the shortcuts are directly available in the windows start with a `(Ubuntu)` appendix.
+
 ## Troubleshoot
 
 ### Markdown preview is empty
