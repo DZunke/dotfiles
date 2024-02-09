@@ -28,6 +28,17 @@ The setup of JetBrains tools should then work with the toolbox.
 
 I also created btw. changed the PHPStorm alias in `~/.aliases`.
 
-```
+```bash
 alias phpstorm="/home/dzunke/.local/share/JetBrains/Toolbox/apps/phpstorm/bin/phpstorm.sh > /dev/null 2>&1"
+```
+
+## Troubleshoot
+
+### Markdown preview is empty
+
+If the Markdown preview functionality within an installed JetBrains IDE is not working there is a specific package
+missing. After it is installed the IDE should be restarted and then the preview should show the rendered markdown.
+
+```bash
+$ sudo apt-get install openjfx
 ```
