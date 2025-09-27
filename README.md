@@ -61,6 +61,10 @@ git config --global credential.helper 'cache --timeout=3600'
 # Disable sudo password prompt
 sudo -i bash -c "echo \"$USER ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers"
 
+# Install Basics and Updates
+sudo apt upgrade
+sudo apt install make htop
+
 # Install PHP
 sudo add-apt-repository ppa:ondrej/php
 export PHP_VERSION=8.4
@@ -72,6 +76,15 @@ php composer-setup.php
 php -r "unlink('composer-setup.php');"
 sudo mv composer.phar /usr/bin/composer
 sudo chmod +x /usr/bin/composer
+
+# Install Docker
+# https://docs.docker.com/engine/install/ubuntu/#install-using-the-convenience-script
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+sudo usermod -aG docker $USER
+newgrp docker
+rm get-docker.sh
+docker --version
 
 # Chrome, for Jetbrains IDEA Activation
 cd ~
