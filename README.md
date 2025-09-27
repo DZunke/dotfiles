@@ -5,24 +5,6 @@ Setup:
 source bootstrap.sh  --force
 ```
 
-Setup PHP
-```
-sudo add-apt-repository ppa:ondrej/php
-
-sudo apt install php8.3-cli php8.3-intl php8.3-bcmath php8.3-curl php8.3-zip
-sudo apt install php8.3-mbstring php8.3-bcmath php8.3-gd php8.3-xml php8.3-zip
-
-php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php
-php -r "unlink('composer-setup.php');"
-sudo mv composer.phar /usr/bin/composer
-sudo chmod +x /usr/bin/composer
-```
-
-Extend Sudoers File to not require password in daily work
-```
-sudo -i bash -c 'echo "WSL_USERNAME ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers'
-```
 
 SSH Connections not possible in VPN
 ```
@@ -55,26 +37,13 @@ git config --global commit.gpgsign true
 git config --global tag.forceSignAnnotated true
 ```
 
-Install Chromium
-```
-sudo add-apt-repository ppa:canonical-chromium-builds/stage
-sudo apt-get install chromium-browser
-sudo apt-get install software-properties-common
-apt --fix-broken install
-sudo apt-get install software-properties-common
-sudo apt-get install chromium-browser
-apt autoremove
-apt autoclean
-sudo apt-get -y install dbus-x11 xfonts-base xfonts-100dpi xfonts-75dpi xfonts-cyrillic xfonts-scalable
-```
-
 Manually write the windows hosts file to wsl hosts file
 ```
 cat /mnt/c/Windows/System32/drivers/etc/hosts | grep 192.* | sudo tee -a /etc/hosts
 ```
 
 Globales Git Ignore
-```
+```bash
 nano ~/.gitignore_global
 # Einträge eintragen
 
@@ -83,4 +52,34 @@ git config --global core.excludesfile ~/.gitignore_global
 
 ```
 git config --global credential.helper 'cache --timeout=3600'
+```
+
+
+## Updated Setup - 2025
+
+```bash
+# Disable sudo password prompt
+sudo -i bash -c "echo \"$USER ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers"
+
+# Install PHP
+sudo add-apt-repository ppa:ondrej/php
+export PHP_VERSION=8.4
+sudo apt install php${PHP_VERSION}-cli php${PHP_VERSION}-intl php${PHP_VERSION}-bcmath php${PHP_VERSION}-curl php${PHP_VERSION}-zip php${PHP_VERSION}-mbstring php${PHP_VERSION}-gd php${PHP_VERSION}-xml
+
+# Install Composer
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+sudo mv composer.phar /usr/bin/composer
+sudo chmod +x /usr/bin/composer
+
+# Chrome, for Jetbrains IDEA Activation
+cd ~
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg -i google-chrome-stable_current_amd64.deb
+sudo apt --fix-broken install
+google-chrome --ozone-platform=wayland
+
+# Jetbrains
+curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
 ```
