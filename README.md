@@ -68,7 +68,7 @@ sudo apt install make htop
 # Install PHP
 sudo add-apt-repository ppa:ondrej/php
 export PHP_VERSION=8.4
-sudo apt install php${PHP_VERSION}-cli php${PHP_VERSION}-intl php${PHP_VERSION}-bcmath php${PHP_VERSION}-curl php${PHP_VERSION}-zip php${PHP_VERSION}-mbstring php${PHP_VERSION}-gd php${PHP_VERSION}-xml
+sudo apt install php${PHP_VERSION}-cli php${PHP_VERSION}-intl php${PHP_VERSION}-bcmath php${PHP_VERSION}-curl php${PHP_VERSION}-zip php${PHP_VERSION}-mbstring php${PHP_VERSION}-gd php${PHP_VERSION}-xml php${PHP_VERSION}-amqp
 
 # Install Composer
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
