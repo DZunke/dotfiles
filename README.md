@@ -63,7 +63,7 @@ sudo -i bash -c "echo \"$USER ALL=(ALL) NOPASSWD: ALL\" >> /etc/sudoers"
 
 # Install Basics and Updates
 sudo apt upgrade
-sudo apt install make htop
+sudo apt install make htop unzip
 
 # Install PHP
 sudo add-apt-repository ppa:ondrej/php
