@@ -100,4 +100,46 @@ curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install
 sudo ln -s ~/.local/share/applications/jetbrains-toolbox.desktop /usr/share/applications/jetbrains-toolbox.desktop
 sudo ln -s ~/.local/share/applications/jetbrains-phpstorm-f2485a63-7ade-499c-afc6-566ed0b6f576.desktop /usr/share/applications/jetbrains-phpstorm.desktop
 
+# Setup NVM, needed to run local mcp servers utilizing npx
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+reload
+nvm install --lts
+nvm use --lts
+```
+
+## Setup Minimal MCP Server
+
+With VS Code running in WSL open `> MCP: Open Remote User Configuration`. When NVM installation and MCP configuration were in the same session it is needed to restart the WSL and Visual Studio because otherwise there will be errors with not finding `npx`, so Visual Studio must be forced to reload it's own internal shell session.
+
+```json
+{
+  "servers": {
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--ignore-https-errors"
+      ]
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    },
+    "git-mcp-server": {
+      "command": "npx",
+      "args": [
+        "@cyanheads/git-mcp-server"
+      ],
+      "env": {
+        "MCP_LOG_LEVEL": "info",
+        "GIT_SIGN_COMMITS": "true"
+      }
+    }
+  }
+}
 ```
