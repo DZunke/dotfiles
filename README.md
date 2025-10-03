@@ -95,4 +95,9 @@ google-chrome --ozone-platform=wayland
 
 # Jetbrains
 curl -fsSL https://raw.githubusercontent.com/nagygergo/jetbrains-toolbox-install/master/jetbrains-toolbox.sh | bash
+
+# Copy Application Files of JetBrains & PHPStorm
+sudo ln -s ~/.local/share/applications/jetbrains-toolbox.desktop /usr/share/applications/jetbrains-toolbox.desktop
+sudo ln -s ~/.local/share/applications/jetbrains-phpstorm-f2485a63-7ade-499c-afc6-566ed0b6f576.desktop /usr/share/applications/jetbrains-phpstorm.desktop
+
 ```
