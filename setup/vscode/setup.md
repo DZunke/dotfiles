@@ -52,6 +52,7 @@ To set up all extensions:
 | github.vscode-pull-request-github      | GitHub       | Pull request and code review support inside VS Code.                 |
 | gruntfuggly.todo-tree                  | Editor       | Adds a widget with an overview of TODOs freom the project.           |
 | hediet.vscode-drawio                   | Editor       | Support for `.drawio` whiteboards.                                   |
+| humao.rest-client                      | Editor       | REST Client with support for `.http` files.                          |
 | k--kato.intellij-idea-keybindings      | Editor       | Keybindings inspired by JetBrains IDEs such as PhpStorm.             |
 | mehedidracula.php-namespace-resolver   | PHP          | Assist with refactoring and adding PHP namespaces and imports.       |
 | mblode.twig-language-2                 | Templating   | Syntax highlighting and basic support for Twig templates.            |

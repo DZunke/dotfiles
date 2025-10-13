@@ -26,6 +26,7 @@ $extensions = @(
   "github.vscode-pull-request-github"
   "gruntfuggly.todo-tree"
   "hediet.vscode-drawio"
+  "humao.rest-client"
   "k--kato.intellij-idea-keybindings"
   "mblode.twig-language-2"
   "mehedidracula.php-namespace-resolver"
