@@ -37,29 +37,34 @@ To set up all extensions:
 
 ### Selected Extensions Description
 
-| Extension                              | Category     | Short description                                              |
-| -------------------------------------- | ------------ | -------------------------------------------------------------- |
-| bierner.markdown-preview-github-styles | Markdown     | GitHub-flavored CSS for the built-in Markdown preview.         |
-| bmewburn.vscode-intelephense-client    | PHP          | Fast PHP language server with IntelliSense and indexing.       |
-| codezombiech.gitignore                 | Git          | Snippets and templates for .gitignore files.                   |
-| docker.docker                          | Container    | Docker explorer, build and run support.                        |
-| dracula-theme.theme-dracula            | Editor       | A popular dark theme with vibrant colors.                      |
-| editorconfig.editorconfig              | Editor       | EditorConfig support to enforce consistent coding styles.      |
-| github.copilot                         | AI assistant | AI code completion powered by GitHub Copilot.                  |
-| github.copilot-chat                    | AI assistant | Chat interface for GitHub Copilot inside VS Code.              |
-| github.vscode-github-actions           | GitHub       | Workflow editing and syntax support for GitHub Actions.        |
-| github.vscode-pull-request-github      | GitHub       | Pull request and code review support inside VS Code.           |
-| k--kato.intellij-idea-keybindings      | Editor       | Keybindings inspired by JetBrains IDEs such as PhpStorm.       |
-| mehedidracula.php-namespace-resolver   | PHP          | Assist with refactoring and adding PHP namespaces and imports. |
-| mblode.twig-language-2                 | Templating   | Syntax highlighting and basic support for Twig templates.      |
-| mikestead.dotenv                       | Editor       | Support for Dotenv file syntax highlighting.                   |
-| ms-vscode.makefile-tools               | Build        | Makefile language support and build task integration.         |
-| ms-vscode.vscode-copilot-vision        | AI assistant | Visual context for Copilot, image-to-code assistance.          |
+| Extension                              | Category     | Short description                                                    |
+| -------------------------------------- | ------------ | -------------------------------------------------------------------- |
+| adpyke.codesnap                        | Editor       | Allows creating fancy screenshots of code.                           |
+| bierner.markdown-preview-github-styles | Markdown     | GitHub-flavored CSS for the built-in Markdown preview.               |
+| bmewburn.vscode-intelephense-client    | PHP          | Fast PHP language server with IntelliSense and indexing.             |
+| codezombiech.gitignore                 | Git          | Snippets and templates for .gitignore files.                         |
+| docker.docker                          | Container    | Docker explorer, build and run support.                              |
+| dracula-theme.theme-dracula            | Editor       | A popular dark theme with vibrant colors.                            |
+| editorconfig.editorconfig              | Editor       | EditorConfig support to enforce consistent coding styles.            |
+| github.copilot                         | AI assistant | AI code completion powered by GitHub Copilot.                        |
+| github.copilot-chat                    | AI assistant | Chat interface for GitHub Copilot inside VS Code.                    |
+| github.vscode-github-actions           | GitHub       | Workflow editing and syntax support for GitHub Actions.              |
+| github.vscode-pull-request-github      | GitHub       | Pull request and code review support inside VS Code.                 |
+| gruntfuggly.todo-tree                  | Editor       | Adds a widget with an overview of TODOs freom the project.           |
+| hediet.vscode-drawio                   | Editor       | Support for `.drawio` whiteboards.                                   |
+| k--kato.intellij-idea-keybindings      | Editor       | Keybindings inspired by JetBrains IDEs such as PhpStorm.             |
+| mehedidracula.php-namespace-resolver   | PHP          | Assist with refactoring and adding PHP namespaces and imports.       |
+| mblode.twig-language-2                 | Templating   | Syntax highlighting and basic support for Twig templates.            |
+| mikestead.dotenv                       | Editor       | Support for Dotenv file syntax highlighting.                         |
+| ms-vscode.makefile-tools               | Build        | Makefile language support and build task integration.                |
+| ms-vscode.vscode-copilot-vision        | AI assistant | Visual context for Copilot, image-to-code assistance.                |
 | ms-vscode.vscode-speech                | AI assistant | Audio context for Copilot; use voice to interact with the assistant. |
-| neilbrayfield.php-docblocker           | PHP          | Helpers for generating PHP DocBlocks.                          |
-| oderwat.indent-rainbow                 | Editor       | Colorize indentation levels for easier code navigation.        |
-| pomdtr.excalidraw-editor               | Editor       | Support for editing `.excalidraw` whiteboards.                 |
-| serhatkaya.twig-formatter              | Templating   | Formatter for Twig files.                                      |
+| neilbrayfield.php-docblocker           | PHP          | Helpers for generating PHP DocBlocks.                                |
+| oderwat.indent-rainbow                 | Editor       | Colorize indentation levels for easier code navigation.              |
+| pomdtr.excalidraw-editor               | Editor       | Support for editing `.excalidraw` whiteboards.                       |
+| serhatkaya.twig-formatter              | Templating   | Formatter for Twig files.                                            |
+| vscode-icons-team.vscode-icons         | Editor       | Icon pack for the file explorer.                                     |
+| yzhang.markdown-all-in-one             | Markdown     | All-In-One-Package for Markdown.                                     |
 
 
 ## User Configuration
@@ -71,27 +76,51 @@ As with the extensions, settings for the VS Code environment are split between t
 
 ```json
 {
-    "workbench.colorTheme": "Dracula Theme",
+	"workbench.colorTheme": "Dracula Theme",
 	"files.autoSave": "afterDelay",
+	"workbench.iconTheme": "vscode-icons",
+	"workbench.tree.indent": 12,
+	"workbench.tips.enabled": false,
+	"workbench.view.alwaysShowHeaderActions": true,
+	"workbench.editor.decorations.badges": false,
+	"workbench.editor.pinnedTabsOnSeparateRow": true,
+	"explorer.autoRevealExclude": {
+		"**/vendor": true
+	},
+	"zenMode.hideActivityBar": false,
+	"telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+	"codesnap.transparentBackground": true,
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Use conventional commit message format."
+        }
+    ],
 
 	"docker.extension.enableComposeLanguageServer": true,
 	"git.blame.editorDecoration.enabled": true,
 
-    "chat.agent.maxRequests": 250,
+  	"chat.agent.maxRequests": 250,
 	"github.copilot.enable": {"*": true},
-    "github.copilot.chat.setupTests.enabled": false,
-    "github.copilot.nextEditSuggestions.enabled": true,
-    "github.copilot.selectedCompletionModel": "gpt-4o-copilot",
-    "github.copilot.chat.codesearch.enabled": true,
+	"github.copilot.chat.setupTests.enabled": false,
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"github.copilot.selectedCompletionModel": "gpt-4o-copilot",
+	"github.copilot.chat.codesearch.enabled": true,
 	"chat.mcp.autostart": "newAndOutdated",
 
-    "chat.tools.terminal.autoApprove": {
-        "composer": true,
-        "curl": true,
-        "docker compose": true,
-        "vendor/bin/rector": true,
-        "vendor/bin/phpcs": true
-    }
+	"chat.tools.terminal.autoApprove": {
+			"composer": true,
+			"curl": true,
+			"docker compose": true,
+			"make": true,
+			"vendor/bin/rector": true,
+			"vendor/bin/phpcs": true,
+			"vendor/bin/deptrac": true
+	},
+
+	"[markdown]": {
+		"editor.defaultFormatter": "yzhang.markdown-all-in-one"
+	},
 }
 ```
 

@@ -13,6 +13,7 @@ if (-not $codeCmd) {
 }
 
 $extensions = @(
+  "adpyke.codesnap"
   "bierner.markdown-preview-github-styles"
   "bmewburn.vscode-intelephense-client"
   "codezombiech.gitignore"
@@ -23,6 +24,8 @@ $extensions = @(
   "github.copilot-chat"
   "github.vscode-github-actions"
   "github.vscode-pull-request-github"
+  "gruntfuggly.todo-tree"
+  "hediet.vscode-drawio"
   "k--kato.intellij-idea-keybindings"
   "mblode.twig-language-2"
   "mehedidracula.php-namespace-resolver"
@@ -34,6 +37,8 @@ $extensions = @(
   "oderwat.indent-rainbow"
   "pomdtr.excalidraw-editor"
   "serhatkaya.twig-formatter"
+  "vscode-icons-team.vscode-icons"
+  "yzhang.markdown-all-in-one"
 )
 
 foreach ($ext in $extensions) {
