@@ -31,6 +31,7 @@ $extensions = @(
   "mblode.twig-language-2"
   "mehedidracula.php-namespace-resolver"
   "mikestead.dotenv"
+  "ms-ossdata.vscode-pgsql"
   "ms-vscode.makefile-tools"
   "ms-vscode.vscode-copilot-vision"
   "ms-vscode.vscode-speech"

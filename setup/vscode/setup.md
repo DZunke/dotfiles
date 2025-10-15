@@ -57,6 +57,7 @@ To set up all extensions:
 | mehedidracula.php-namespace-resolver   | PHP          | Assist with refactoring and adding PHP namespaces and imports.       |
 | mblode.twig-language-2                 | Templating   | Syntax highlighting and basic support for Twig templates.            |
 | mikestead.dotenv                       | Editor       | Support for Dotenv file syntax highlighting.                         |
+| ms-ossdata.vscode-pgsql                | Database     | Utilize and work with the Postgres Databases.                        |
 | ms-vscode.makefile-tools               | Build        | Makefile language support and build task integration.                |
 | ms-vscode.vscode-copilot-vision        | AI assistant | Visual context for Copilot, image-to-code assistance.                |
 | ms-vscode.vscode-speech                | AI assistant | Audio context for Copilot; use voice to interact with the assistant. |
