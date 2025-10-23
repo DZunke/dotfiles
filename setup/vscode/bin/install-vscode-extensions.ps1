@@ -38,6 +38,7 @@ $extensions = @(
   "neilbrayfield.php-docblocker"
   "oderwat.indent-rainbow"
   "pomdtr.excalidraw-editor"
+  "redis.redis-for-vscode"
   "serhatkaya.twig-formatter"
   "vscode-icons-team.vscode-icons"
   "yzhang.markdown-all-in-one"

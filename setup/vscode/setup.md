@@ -64,6 +64,7 @@ To set up all extensions:
 | neilbrayfield.php-docblocker           | PHP          | Helpers for generating PHP DocBlocks.                                |
 | oderwat.indent-rainbow                 | Editor       | Colorize indentation levels for easier code navigation.              |
 | pomdtr.excalidraw-editor               | Editor       | Support for editing `.excalidraw` whiteboards.                       |
+| redis.redis-for-vscode              	 | Database     | Interface for Redis database.                                        |
 | serhatkaya.twig-formatter              | Templating   | Formatter for Twig files.                                            |
 | vscode-icons-team.vscode-icons         | Editor       | Icon pack for the file explorer.                                     |
 | yzhang.markdown-all-in-one             | Markdown     | All-In-One-Package for Markdown.                                     |
