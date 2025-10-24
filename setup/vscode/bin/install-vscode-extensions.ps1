@@ -36,6 +36,7 @@ $extensions = @(
   "ms-vscode.vscode-copilot-vision"
   "ms-vscode.vscode-speech"
   "neilbrayfield.php-docblocker"
+  "neo4j-extensions.neo4j-for-vscode"
   "oderwat.indent-rainbow"
   "pomdtr.excalidraw-editor"
   "redis.redis-for-vscode"

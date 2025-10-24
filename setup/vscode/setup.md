@@ -62,9 +62,10 @@ To set up all extensions:
 | ms-vscode.vscode-copilot-vision        | AI assistant | Visual context for Copilot, image-to-code assistance.                |
 | ms-vscode.vscode-speech                | AI assistant | Audio context for Copilot; use voice to interact with the assistant. |
 | neilbrayfield.php-docblocker           | PHP          | Helpers for generating PHP DocBlocks.                                |
+| neo4j-extensions.neo4j-for-vscode      | Database     | Support for Neo4J databases                                          |
 | oderwat.indent-rainbow                 | Editor       | Colorize indentation levels for easier code navigation.              |
 | pomdtr.excalidraw-editor               | Editor       | Support for editing `.excalidraw` whiteboards.                       |
-| redis.redis-for-vscode              	 | Database     | Interface for Redis database.                                        |
+| redis.redis-for-vscode                 | Database     | Interface for Redis database.                                        |
 | serhatkaya.twig-formatter              | Templating   | Formatter for Twig files.                                            |
 | vscode-icons-team.vscode-icons         | Editor       | Icon pack for the file explorer.                                     |
 | yzhang.markdown-all-in-one             | Markdown     | All-In-One-Package for Markdown.                                     |
